@@ -33,8 +33,8 @@ return {
     CONSUMER_USERNAME = "X-Consumer-Username",
     RATELIMIT_LIMIT = "X-RateLimit-Limit",
     RATELIMIT_REMAINING = "X-RateLimit-Remaining",
-    DATEUSAGE_LIMIT = "X-DataUsage-Limit",
-    DATEUSAGE_REMAINING = "X-DataUsage-Remaining"    
+    DATAUSAGE_LIMIT = "X-DataUsage-Limit",
+    DATAUSAGE_REMAINING = "X-DataUsage-Remaining"    
   },
   AUTHENTICATION = {
     QUERY = "query",

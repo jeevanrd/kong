@@ -1,7 +1,7 @@
 local BasePlugin = require "kong.plugins.base_plugin"
 local access = require "kong.plugins.datausage.access"
-local header_filter = require "kong.plugins.datausage.header_filter"
 local log = require "kong.plugins.datausage.log"
+local basic_serializer = require "kong.plugins.log_serializers.basic"
 
 local DataUsageHandler = BasePlugin:extend()
 
@@ -16,7 +16,8 @@ end
 
 function DataUsageHandler:log(conf)
   DataUsageHandler.super.log(self)
-  log.execute(conf)
+  local message = basic_serializer.serialize(ngx)
+  log.execute(conf, message)
 end
 
 return DataUsageHandler
