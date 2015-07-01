@@ -14,6 +14,7 @@ plugins_available:
   - response_transformer
   - requestsizelimiting
   - analytics
+  - datausage
 
 ## The Kong working directory
 ## (Make sure you have read and write permissions)
@@ -129,10 +130,10 @@ nginx: |
       listen {{proxy_port}};
       listen {{proxy_ssl_port}} ssl;
 
-      ssl_certificate_by_lua 'kong.exec_plugins_certificate()';
+      # ssl_certificate_by_lua 'kong.exec_plugins_certificate()';
 
-      ssl_certificate {{ssl_cert}};
-      ssl_certificate_key {{ssl_key}};
+      # ssl_certificate {{ssl_cert}};
+      # ssl_certificate_key {{ssl_key}};
 
       location / {
         default_type 'text/plain';

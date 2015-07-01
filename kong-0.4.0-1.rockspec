@@ -2,8 +2,8 @@ package = "kong"
 version = "0.4.0-1"
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "git://github.com/Mashape/kong",
-  tag = "0.4.0"
+  url = "git@github.com:jeevanrd/kong.git",
+  branch = "master"
 }
 description = {
   summary = "Kong is a scalable and customizable API Management Layer built on top of Nginx.",
@@ -158,6 +158,12 @@ build = {
     ["kong.plugins.ssl.access"] = "kong/plugins/ssl/access.lua",
     ["kong.plugins.ssl.ssl_util"] = "kong/plugins/ssl/ssl_util.lua",
     ["kong.plugins.ssl.schema"] = "kong/plugins/ssl/schema.lua",
+
+    ["kong.plugins.datausage.handler"] = "kong/plugins/datausage/handler.lua",
+    ["kong.plugins.datausage.access"] = "kong/plugins/datausage/access.lua",
+    ["kong.plugins.datausage.schema"] = "kong/plugins/datausage/schema.lua",
+    ["kong.plugins.datausage.daos"] = "kong/plugins/datausage/daos.lua",
+    ["kong.plugins.datausage.log"] = "kong/plugins/datausage/log.lua",    
 
     ["kong.api.app"] = "kong/api/app.lua",
     ["kong.api.crud_helpers"] = "kong/api/crud_helpers.lua",

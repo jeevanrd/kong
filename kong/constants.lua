@@ -32,7 +32,9 @@ return {
     CONSUMER_CUSTOM_ID = "X-Consumer-Custom-ID",
     CONSUMER_USERNAME = "X-Consumer-Username",
     RATELIMIT_LIMIT = "X-RateLimit-Limit",
-    RATELIMIT_REMAINING = "X-RateLimit-Remaining"
+    RATELIMIT_REMAINING = "X-RateLimit-Remaining",
+    DATEUSAGE_LIMIT = "X-DataUsage-Limit",
+    DATEUSAGE_REMAINING = "X-DataUsage-Remaining"    
   },
   AUTHENTICATION = {
     QUERY = "query",
@@ -48,5 +50,15 @@ return {
       "month",
       "year"
     }
-  }
+  },
+  DATAUSAGE = {
+    PERIODS = {
+      "second",
+      "minute",
+      "hour",
+      "day",
+      "month",
+      "year"
+    }
+  }  
 }
